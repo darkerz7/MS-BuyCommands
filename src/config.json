@@ -1,0 +1,695 @@
+{
+	"CoolDownCommand": 0.5,
+    "Weapons": {
+        "Deagle": {
+            "Commands": [ "deagle" ],
+            "EntityName": "weapon_deagle",
+            "Price_CT": 700,
+            "Price_T": 700,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Elite": {
+            "Commands": [ "elite" ],
+            "EntityName": "weapon_elite",
+            "Price_CT": 300,
+            "Price_T": 300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Fiveseven": {
+            "Commands": [ "fiveseven", "57", "fs" ],
+            "EntityName": "weapon_fiveseven",
+            "Price_CT": 500,
+            "Price_T": 500,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Glock": {
+            "Commands": [ "glock", "gs" ],
+            "EntityName": "weapon_glock",
+            "Price_CT": 200,
+            "Price_T": 200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"AK47": {
+            "Commands": [ "ak", "ak47" ],
+            "EntityName": "weapon_ak47",
+            "Price_CT": 2700,
+            "Price_T": 2700,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Aug": {
+            "Commands": [ "aug" ],
+            "EntityName": "weapon_aug",
+            "Price_CT": 3300,
+            "Price_T": 3300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"AWP": {
+            "Commands": [ "awp" ],
+            "EntityName": "weapon_awp",
+            "Price_CT": 4750,
+            "Price_T": 4750,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Famas": {
+            "Commands": [ "famas" ],
+            "EntityName": "weapon_famas",
+            "Price_CT": 2050,
+            "Price_T": 2050,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"G3SG1": {
+            "Commands": [ "g3sg1" ],
+            "EntityName": "weapon_g3sg1",
+            "Price_CT": 5000,
+            "Price_T": 5000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Galil": {
+            "Commands": [ "galil" ],
+            "EntityName": "weapon_galilar",
+            "Price_CT": 1800,
+            "Price_T": 1800,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"M249": {
+            "Commands": [ "m249" ],
+            "EntityName": "weapon_m249",
+            "Price_CT": 5200,
+            "Price_T": 5200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"M4A1": {
+            "Commands": [ "m4a4", "m4" ],
+            "EntityName": "weapon_m4a1",
+            "Price_CT": 3100,
+            "Price_T": 3100,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"MAC10": {
+            "Commands": [ "mac10", "mac" ],
+            "EntityName": "weapon_mac10",
+            "Price_CT": 1050,
+            "Price_T": 1050,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"P90": {
+            "Commands": [ "p90" ],
+            "EntityName": "weapon_p90",
+            "Price_CT": 2350,
+            "Price_T": 2350,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"MP5sd": {
+            "Commands": [ "mp5", "mp5sd" ],
+            "EntityName": "weapon_mp5sd",
+            "Price_CT": 1500,
+            "Price_T": 1500,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"UMP45": {
+            "Commands": [ "ump", "ump45" ],
+            "EntityName": "weapon_ump45",
+            "Price_CT": 1200,
+            "Price_T": 1200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"XM1014": {
+            "Commands": [ "xm", "xm1014" ],
+            "EntityName": "weapon_xm1014",
+            "Price_CT": 2000,
+            "Price_T": 2000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Bizon": {
+            "Commands": [ "bizon", "pp" ],
+            "EntityName": "weapon_bizon",
+            "Price_CT": 1400,
+            "Price_T": 1400,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Mag7": {
+            "Commands": [ "mag7" ],
+            "EntityName": "weapon_mag7",
+            "Price_CT": 1300,
+            "Price_T": 1300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Negev": {
+            "Commands": [ "negev" ],
+            "EntityName": "weapon_negev",
+            "Price_CT": 1700,
+            "Price_T": 1700,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Sawedoff": {
+            "Commands": [ "sawedoff" ],
+            "EntityName": "weapon_sawedoff",
+            "Price_CT": 1100,
+            "Price_T": 1100,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Tec9": {
+            "Commands": [ "tec9" ],
+            "EntityName": "weapon_tec9",
+            "Price_CT": 500,
+            "Price_T": 500,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Taser": {
+            "Commands": [ "taser", "zeus" ],
+            "EntityName": "weapon_taser",
+            "Price_CT": 200,
+            "Price_T": 200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"P2000": {
+            "Commands": [ "p2000", "hkp" ],
+            "EntityName": "weapon_hkp2000",
+            "Price_CT": 200,
+            "Price_T": 200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"MP7": {
+            "Commands": [ "mp7" ],
+            "EntityName": "weapon_mp7",
+            "Price_CT": 1500,
+            "Price_T": 1500,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"MP9": {
+            "Commands": [ "mp9" ],
+            "EntityName": "weapon_mp9",
+            "Price_CT": 1250,
+            "Price_T": 1250,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Nova": {
+            "Commands": [ "nova" ],
+            "EntityName": "weapon_nova",
+            "Price_CT": 1050,
+            "Price_T": 1050,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"P250": {
+            "Commands": [ "p250" ],
+            "EntityName": "weapon_p250",
+            "Price_CT": 300,
+            "Price_T": 300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"SCAR20": {
+            "Commands": [ "scar", "scar20" ],
+            "EntityName": "weapon_scar20",
+            "Price_CT": 5000,
+            "Price_T": 5000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"SG556": {
+            "Commands": [ "sg556" ],
+            "EntityName": "weapon_sg556",
+            "Price_CT": 3000,
+            "Price_T": 3000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"SSG08": {
+            "Commands": [ "scout", "ssg08" ],
+            "EntityName": "weapon_ssg08",
+            "Price_CT": 1700,
+            "Price_T": 1700,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeGG": {
+            "Commands": [ "knifegg" ],
+            "EntityName": "weapon_knifegg",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Knife": {
+            "Commands": [ "knife" ],
+            "EntityName": "weapon_knife",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Flash": {
+            "Commands": [ "flash", "flashbang" ],
+            "EntityName": "weapon_flashbang",
+            "Price_CT": 0,
+            "Price_T": 0,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"HE": {
+            "Commands": [ "he" ],
+            "EntityName": "weapon_hegrenade",
+            "Price_CT": 200,
+            "Price_T": 200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Smoke": {
+            "Commands": [ "smoke", "smokegrenade" ],
+            "EntityName": "weapon_smokegrenade",
+            "Price_CT": 300,
+            "Price_T": 300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Molotov": {
+            "Commands": [ "molotov" ],
+            "EntityName": "weapon_molotov",
+            "Price_CT": 400,
+            "Price_T": 400,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Decoy": {
+            "Commands": [ "decoy" ],
+            "EntityName": "weapon_decoy",
+            "Price_CT": 50,
+            "Price_T": 50,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Inc": {
+            "Commands": [ "inc", "incgrenade" ],
+            "EntityName": "weapon_incgrenade",
+            "Price_CT": 600,
+            "Price_T": 600,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"c4": {
+            "Commands": [ "c4" ],
+            "EntityName": "weapon_c4",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeT": {
+            "Commands": [ "knife_t" ],
+            "EntityName": "weapon_knife_t",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"M4A1s": {
+            "Commands": [ "m4a1", "m4s", "m4a1s" ],
+            "EntityName": "weapon_m4a1_silencer",
+            "Price_CT": 2900,
+            "Price_T": 2900,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"USP": {
+            "Commands": [ "usp" ],
+            "EntityName": "weapon_usp_silencer",
+            "Price_CT": 200,
+            "Price_T": 200,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"CZ75a": {
+            "Commands": [ "cz", "cs75" ],
+            "EntityName": "weapon_cz75a",
+            "Price_CT": 500,
+            "Price_T": 500,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"R8": {
+            "Commands": [ "r8", "revolver" ],
+            "EntityName": "weapon_revolver",
+            "Price_CT": 600,
+            "Price_T": 600,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeBayonet": {
+            "Commands": [ "bayonet" ],
+            "EntityName": "weapon_bayonet",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeCSS": {
+            "Commands": [ "knife_css" ],
+            "EntityName": "weapon_knife_css",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeFlip": {
+            "Commands": [ "knife_flip" ],
+            "EntityName": "weapon_knife_flip",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeGut": {
+            "Commands": [ "knife_gut" ],
+            "EntityName": "weapon_knife_gut",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeKarambit": {
+            "Commands": [ "knife_karambit" ],
+            "EntityName": "weapon_knife_karambit",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeM9": {
+            "Commands": [ "knife_m9" ],
+            "EntityName": "weapon_knife_m9_bayonet",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeTactical": {
+            "Commands": [ "knife_tactical" ],
+            "EntityName": "weapon_knife_tactical",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeFalchion": {
+            "Commands": [ "knife_falchion" ],
+            "EntityName": "weapon_knife_falchion",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeBowie": {
+            "Commands": [ "knife_bowie" ],
+            "EntityName": "weapon_knife_survival_bowie",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeButterfly": {
+            "Commands": [ "knife_butterfly" ],
+            "EntityName": "weapon_knife_butterfly",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifePush": {
+            "Commands": [ "knife_push" ],
+            "EntityName": "weapon_knife_push",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeCord": {
+            "Commands": [ "knife_cord" ],
+            "EntityName": "weapon_knife_cord",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeCanis": {
+            "Commands": [ "knife_canis" ],
+            "EntityName": "weapon_knife_canis",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeUrsus": {
+            "Commands": [ "knife_ursus" ],
+            "EntityName": "weapon_knife_ursus",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeJack": {
+            "Commands": [ "knife_gypsy" ],
+            "EntityName": "weapon_knife_gypsy_jackknife",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeOutdoor": {
+            "Commands": [ "knife_outdoor" ],
+            "EntityName": "weapon_knife_outdoor",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeStiletto": {
+            "Commands": [ "knife_stiletto" ],
+            "EntityName": "weapon_knife_stiletto",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeWidowmaker": {
+            "Commands": [ "knife_widowmaker" ],
+            "EntityName": "weapon_knife_widowmaker",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeSkeleton": {
+            "Commands": [ "knife_skeleton" ],
+            "EntityName": "weapon_knife_skeleton",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"KnifeKukri": {
+            "Commands": [ "knife_kukri" ],
+            "EntityName": "weapon_knife_kukri",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Kevlar": {
+            "Commands": [ "kevlar" ],
+            "EntityName": "item_kevlar",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Assaultsuit": {
+            "Commands": [ "assault" ],
+            "EntityName": "item_assaultsuit",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Defuser": {
+            "Commands": [ "defuser" ],
+            "EntityName": "item_defuser",
+            "Price_CT": 300,
+            "Price_T": 300,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        },
+		"Ammo": {
+            "Commands": [ "ammo" ],
+            "EntityName": "ammo_50ae",
+            "Price_CT": 1000,
+            "Price_T": 1000,
+            "Limit_CT": 0,
+			"Limit_T": 0,
+            "Restrict_CT": false,
+			"Restrict_T": false
+        }
+    }
+}

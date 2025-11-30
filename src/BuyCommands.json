@@ -1,0 +1,46 @@
+{
+	"BuyCommands.Alive": {
+		"en-us": "This feature need you {{orange}}to be alive{{default}}!",
+		"ru-ru": "Для этого вы {{orange}}должны быть живы{{default}}!"
+	},
+	"BuyCommands.Cooldown": {
+		"en-us": "Your purchase is on {{orange}}cooldown {{default}}now!",
+		"ru-ru": "Покупка сейчас в {{orange}}кулдауне{{default}}!"
+	},
+	"BuyCommands.Restrict": {
+		"en-us": "Weapon {{purple}}{0} {{default}}is {{red}}restricted{{default}}!",
+		"ru-ru": "Покупка оружия {{purple}}{0} {{red}}ограничена{{default}}!"
+	},
+	"BuyCommands.MaxPurchase": {
+		"en-us": "You have reached {{red}}maximum {{default}}purchase for {{purple}}{0}{{default}}, you can purchase again in next round",
+		"ru-ru": "Вы достигли {{red}}максимума {{default}}для покупки {{purple}}{0}{{default}}, попытайтесь в следующем раунде"
+	},
+	"BuyCommands.NoMoney": {
+		"en-us": "You {{red}}don't have enough money {{default}}to purchase this weapon!",
+		"ru-ru": "Вы {{red}}не имеете средств{{default}}, чтобы купить это оружие!"
+	},
+	"BuyCommands.HaveNade": {
+		"en-us": "You {{green}}already have {{default}}a grenade of this type!",
+		"ru-ru": "Вы {{green}}уже имеете {{default}}гранату данного типа!"
+	},
+	"BuyCommands.SpecialWeapon": {
+		"en-us": "You {{red}}can't repurchase {{purple}}special weapons{{default}}!",
+		"ru-ru": "Вы {{red}}не можете перезакупить {{purple}}материю{{default}}!"
+	},
+	"BuyCommands.PurchaseWithLimit": {
+		"en-us": "You have purchase {{purple}}{0}{{default}}, Purchase Limit: {{green}}{1}{{default}}/{{red}}{2}",
+		"ru-ru": "Вы купили {{purple}}{0}{{default}}, Лимит для покупки: {{green}}{1}{{default}}/{{red}}{2}"
+	},
+	"BuyCommands.Purchase": {
+		"en-us": "You have purchase {{purple}}{0}",
+		"ru-ru": "Вы купили {{purple}}{0}"
+	},
+	"BuyCommands.Reload": {
+		"en-us": "{{orange}}You have reloaded the configs",
+		"ru-ru": "{{orange}}Вы перезагрузили конфиги"
+	},
+	"BuyCommands.NoPermission": {
+		"en-us": "You have {{red}}no permission {{default}}to use this command!",
+		"ru-ru": "У вас {{red}}недостаточно прав {{default}}для данной команды"
+	}
+}

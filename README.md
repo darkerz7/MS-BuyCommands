@@ -16,7 +16,7 @@ Purchase weapon commands and restrict
 
 ## Arguments in configs:
 `CoolDownCommand` - (float) the time after which the command will be available again<br>
-`Commands` - (List<string>) list of commands to type in chat<br>
+`Commands` - (`List<string>`) list of commands to type in chat<br>
 `EntityName` - (string) entity name to give<br>
 `Price_CT` - (uint) The purchase price of weapons for Counter-Terrorists(via command)<br>
 `Price_T` - (uint) The purchase price of weapons for Terrorists(via command)<br>

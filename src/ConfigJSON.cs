@@ -92,6 +92,7 @@ namespace MS_BuyCommands
                     foreach (var command in weapon.Value.Commands)
                     {
                         BuyCommands._clients!.InstallCommandCallback(command, BuyCommands.OnBuyCommand);
+                        BuyCommands._convars!.CreateConsoleCommand($"c_{command}", BuyCommands.OnBuyCommandC);
                     }
                 }
             }
@@ -106,6 +107,7 @@ namespace MS_BuyCommands
                     foreach (var command in weapon.Value.Commands)
                     {
                         BuyCommands._clients!.RemoveCommandCallback(command, BuyCommands.OnBuyCommand);
+                        BuyCommands._convars!.ReleaseCommand($"c_{command}");
                     }
                 }
             }
@@ -200,7 +202,8 @@ namespace MS_BuyCommands
 
     public static class Arrays
     {
-        public static readonly Dictionary<string, GearSlot> EntValidArray = new Dictionary<string, GearSlot>{
+        public static readonly Dictionary<string, GearSlot> EntValidArray = new()
+        {
             {"weapon_deagle",                   GearSlot.Pistol},
             {"weapon_elite",                    GearSlot.Pistol},
             {"weapon_fiveseven",                GearSlot.Pistol},
@@ -272,7 +275,8 @@ namespace MS_BuyCommands
             {"ammo_50ae",                       GearSlot.Invalid},
         };
 
-        public static readonly Dictionary<string, int> EntDefIndexArray = new Dictionary<string, int>{
+        public static readonly Dictionary<string, int> EntDefIndexArray = new()
+        {
             {"weapon_deagle",                   1},
             {"weapon_elite",                    2},
             {"weapon_fiveseven",                3},

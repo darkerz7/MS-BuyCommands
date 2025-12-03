@@ -12,7 +12,6 @@ using Sharp.Shared.Objects;
 using Sharp.Shared.Types;
 using Sharp.Shared.Units;
 using System.Text.Json;
-using static CMsgGCCStrike15_v2_Account_RequestCoPlays.Types;
 
 namespace MS_BuyCommands
 {
@@ -29,6 +28,7 @@ namespace MS_BuyCommands
             _hooks = sharedSystem.GetHookManager();
             _dllPath = dllPath;
             _logger = sharedSystem.GetLoggerFactory().CreateLogger<BuyCommands>();
+            _convars = sharedSystem.GetConVarManager();
         }
 
         public static IModSharp? _modSharp;
@@ -37,11 +37,12 @@ namespace MS_BuyCommands
         private readonly IHookManager _hooks;
         private readonly string _dllPath;
         private readonly ILogger<BuyCommands> _logger;
+        public static IConVarManager? _convars;
 
         private static IModSharpModuleInterface<ILocalizerManager>? _localizer;
 
         static ConfigJSON? cfg = null;
-        static PlayerValues[] g_PlayerValues = new PlayerValues[PlayerSlot.MaxPlayerCount];
+        static readonly PlayerValues[] g_PlayerValues = new PlayerValues[PlayerSlot.MaxPlayerCount];
 
         public bool Init()
         {
@@ -109,7 +110,7 @@ namespace MS_BuyCommands
             if (cfg == null) PrintToConsole($"Config files not found");
         }
 
-        void LoadCFG(string sConfig)
+        static void LoadCFG(string sConfig)
         {
             if (File.Exists(sConfig))
             {
@@ -152,6 +153,14 @@ namespace MS_BuyCommands
             }
 
             return default;
+        }
+
+        public static ECommandAction OnBuyCommandC(IGameClient? client, StringCommand command)
+        {
+            if (client == null) return ECommandAction.Stopped;
+            StringCommand newcommand = new(command.CommandName[2..], command.ChatTrigger, command.ArgString);
+
+            return OnBuyCommand(client, newcommand);
         }
 
         public static ECommandAction OnBuyCommand(IGameClient client, StringCommand command)

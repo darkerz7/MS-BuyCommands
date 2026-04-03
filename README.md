@@ -4,6 +4,7 @@ Purchase weapon commands and restrict
 ## Required packages:
 1. [ModSharp](https://github.com/Kxnrl/modsharp-public)
 2. [LocalizerManager](https://github.com/Kxnrl/modsharp-public/tree/master/Sharp.Modules/LocalizerManager)
+3. [AdminManager](https://github.com/Kxnrl/modsharp-public/tree/master/Sharp.Modules/AdminManager)
 
 ## Installation:
 1. Install `LocalizerManager`

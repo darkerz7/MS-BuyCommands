@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Sharp.Modules.AdminManager.Shared;
 using Sharp.Modules.LocalizerManager.Shared;
 using Sharp.Shared;
 using Sharp.Shared.Definition;
@@ -40,6 +41,8 @@ namespace MS_BuyCommands
         public static IConVarManager? _convars;
 
         private static IModSharpModuleInterface<ILocalizerManager>? _localizer;
+        private static IModSharpModuleInterface<IAdminManager>? _adminManager;
+        private bool _AMInit = false;
 
         static ConfigJSON? cfg = null;
         static readonly PlayerValues[] g_PlayerValues = new PlayerValues[PlayerSlot.MaxPlayerCount];
@@ -50,18 +53,50 @@ namespace MS_BuyCommands
             _modSharp!.InstallGameListener(this);
             _hooks.PlayerWeaponCanUse.InstallHookPre(OnPlayerWeaponCanUse);
             _hooks.PlayerCanAcquire.InstallHookPre(OnPlayerCanAcquire);
-            _clients!.InstallCommandCallback("buycommands_reload", OnReload);
             return true;
+        }
+
+        private void InitializePermissions()
+        {
+            if (_adminManager?.Instance is not { } adminManager || _AMInit) return;
+
+            try
+            {
+                var registry = adminManager.GetCommandRegistry(DisplayName);
+
+                registry.RegisterPermissions(["buycommands:reload"]);
+                registry.RegisterAdminCommand("buycommands_reload", OnReloadCallback, ["buycommands:reload"]);
+
+                _AMInit = true;
+            }
+            catch (InvalidOperationException)
+            {
+                // CommandCenter isn't loaded yet — will retry when it connects.
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Failed to initialize admin permissions.");
+            }
+        }
+
+        public void PostInit()
+        {
+            TryResolveAdminManager();
+        }
+
+        public void OnLibraryConnected(string name)
+        {
+            if (name.Equals("Sharp.Modules.AdminManager", StringComparison.OrdinalIgnoreCase)) TryResolveAdminManager();
         }
 
         public void OnAllModulesLoaded()
         {
             GetLocalizer()?.LoadLocaleFile("BuyCommands");
+            TryResolveAdminManager();
         }
 
         public void Shutdown()
         {
-            _clients!.RemoveCommandCallback("buycommands_reload", OnReload);
             cfg?.UnregisterCommands();
             cfg = null;
             _modSharp!.RemoveGameListener(this);
@@ -263,61 +298,21 @@ namespace MS_BuyCommands
             return ECommandAction.Stopped;
         }
 
-        private ECommandAction OnReload(IGameClient client, StringCommand command)
-        {
-            return OnAdminCommand(client, command, "root", OnReloadCallback);
-        }
-
-        private void OnReloadCallback(IGameClient client, StringCommand command)
+        private void OnReloadCallback(IGameClient? client, StringCommand command)
         {
             cfg?.UnregisterCommands();
             cfg = null;
             LoadCFGs();
             cfg?.RegisterCommands();
-            if (client.GetPlayerController() is { } player) ReplyToCommand(client, player, command.ChatTrigger, "BuyCommands.Reload");
-        }
-
-        delegate void AdminCommandCallback(IGameClient client, StringCommand command);
-        private ECommandAction OnAdminCommand(IGameClient client, StringCommand command, string permission, AdminCommandCallback callback)
-        {
-            if (callback is not null && client.IsValid)
-            {
-                if (permission.Equals("<EmptyPermission>"))
-                {
-                    InvokeClientCallback(client, command, callback);
-                    return ECommandAction.Stopped;
-                }
-                var admin = client.IsAuthenticated ? _clients!.FindAdmin(client.SteamId) : null;
-                if (admin is not null && admin.HasPermission(permission)) InvokeClientCallback(client, command, callback);
-                else
-                {
-                    if (client.GetPlayerController() is { } player) ReplyToCommand(client, player, command.ChatTrigger, "BuyCommands.NoPermission");
-                }
-            }
-            return ECommandAction.Stopped;
-        }
-
-        private void InvokeClientCallback(IGameClient client, StringCommand command, AdminCommandCallback callbacks)
-        {
-            foreach (var callback in callbacks.GetInvocationList())
-            {
-                try
-                {
-                    ((AdminCommandCallback)callback).Invoke(client, command);
-                }
-                catch (Exception e)
-                {
-                    _logger.LogError(e, "An error occurred while calling CommandCallback::{s}", command.CommandName);
-                }
-            }
+            if (client?.GetPlayerController() is { } player) ReplyToCommand(client, player, command.ChatTrigger, "BuyCommands.Reload");
         }
 
         static void ReplyToCommand(IGameClient client, IPlayerController player, bool bChatTrigger, string sMessage, params object[] arg)
         {
             if (GetLocalizer() is { } lm)
             {
-                var localizer = lm.GetLocalizer(client);
-                player.Print(bChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}BuyCommands{ChatColor.Blue}] {ChatColor.White} {ReplaceColorTags(localizer.Format(sMessage, arg))}");
+                var localizer = lm.For(client);
+                player.Print(bChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}BuyCommands{ChatColor.Blue}] {ChatColor.White} {ReplaceColorTags(localizer.Text(sMessage, arg))}");
             }
         }
 
@@ -361,6 +356,21 @@ namespace MS_BuyCommands
                 _localizer = _modules!.GetOptionalSharpModuleInterface<ILocalizerManager>(ILocalizerManager.Identity);
             }
             return _localizer?.Instance;
+        }
+
+        private void TryResolveAdminManager()
+        {
+            if (_adminManager?.Instance is not null)  return;
+
+            _adminManager = _modules!.GetOptionalSharpModuleInterface<IAdminManager>(IAdminManager.Identity);
+
+            if (_adminManager?.Instance is null)
+            {
+                _logger.LogWarning("AdminManager is not installed. Admin commands will not work.");
+                return;
+            }
+
+            InitializePermissions();
         }
 
         int IGameListener.ListenerVersion => IGameListener.ApiVersion;

@@ -12,8 +12,13 @@ Purchase weapon commands and restrict
 3. Copy BuyCommands.json to `sharp/locales` folger
 4. Configure config files `config.json`, `prefix/*.json`, `maps/*.json`
 
+## Admin privileges
+Privilege | Description
+--- | ---
+`buycommands:reload` | Allows reloading configs
+
 ## Commands:
-`ms_buycommands_reload` - Reload config file of BuyCommands(`root`)
+`ms_buycommands_reload` - Reload config file of BuyCommands(`buycommands:reload`)
 
 ## Arguments in configs:
 `CoolDownCommand` - (float) the time after which the command will be available again<br>
